@@ -10,6 +10,10 @@ server.use(express.static('public'))
 //configurando view engine com ejs
 server.set('view engine', 'ejs')
 
+// configurando decode dos formularios
+server.use(express.urlencoded({urlencoded: true})) 
+
+
 
 server.use(routes)
 
